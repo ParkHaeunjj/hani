@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>グルメ - 일본 맛집을 만나다</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #F06292;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #e4e4e4;
+        }
+
+        footer {
+            background-color: #F06292;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>グルメ</h1>
+    </header>
+
+    <nav>
+        <a onclick="showContent('tokyo')">도쿄</a>
+        <a onclick="showContent('osaka')">오사카</a>
+        <a onclick="showContent('fukuoka')">후쿠오카</a>
+    </nav>
+
+    <div id="tokyo" class="main-content">
+        <h2>瑞兆</h2>
+        <img src="도쿄이미지주소.jpg" alt="도쿄 이미지">
+        <p>かつ丼.</p>
+        <a href="https://www.google.com/maps/place/%EC%B9%B4%EC%B8%A0%EB%8F%99%EC%95%BC+%EC%A6%88%EC%9D%B4%EC%B4%88/@35.6627073,139.6904892,17z/data=!3m2!4b1!5s0x60188cac0e161db5:0x91367b1ae74d1afa!4m6!3m5!1s0x60188cac12069909:0x41c48d07160668ef!8m2!3d35.662703!4d139.6953601!16s%2Fg%2F11b5pkrlhg?hl=ko&entry=ttu">zuichou.com</a>
+    </div>
+
+    <div id="osaka" class="main-content">
+        <h2>551HORAI</h2>
+        <img src="551horai.jpg" alt="오사카 이미지">
+        <p>おすすめは肉まん.</p>
+        <a href="https://www.google.com/maps/place/551+%ED%98%B8%EB%9D%BC%EC%9D%B4%EB%A7%8C%EB%91%90/@34.6664095,135.4987708,17z/data=!3m1!4b1!4m6!3m5!1s0x6000e713534d9175:0x1d6dba81c436097b!8m2!3d34.6664051!4d135.5013457!16s%2Fg%2F11c0r5dk3b?hl=ko&entry=ttu">551horaihonten.com</a>
+    </div>
+
+    <div id="fukuoka" class="main-content">
+        <h2>かわせみ</h2>
+        <img src="kawasemi.jpg" alt="후쿠오카 이미지">
+        <p>おすすめは広島風お好み焼き.</p>
+        <a href="https://www.google.com/maps/place/Kawasemi/data=!4m10!1m2!2m1!1skawasemi!3m6!1s0x354191d42e1bffff:0x4f2e50a9cf07b154!8m2!3d33.6027774!4d130.4267875!15sCghrYXdhc2VtaVoKIghrYXdhc2VtaZIBFm9rb25vbWl5YWtpX3Jlc3RhdXJhbnTgAQA!16s%2Fg%2F11c6dc7mr6?hl=ko&entry=ttu">kawasemi.com</a>
+    </div>
+
+    <footer>
+        <p>© 2023 グルメ</p>
+    </footer>
+
+    <script>
+        function showContent(id) {
+            var content = document.getElementById(id);
+            var contents = document.getElementsByClassName('main-content');
+            for (var i = 0; i < contents.length; i++) {
+                contents[i].style.display = 'none';
+            }
+            content.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
